@@ -1,0 +1,24 @@
+{
+    "syllabusWiseAnalysis": [
+        {
+            "id": 1,
+            "title": "HTML Tools, Forms, History",
+            "percentage": 80
+        },
+        {
+            "id": 2,
+            "title": "Tags & References in HTML",
+            "percentage": 60
+        },
+        {
+            "id": 3,
+            "title": "HTML Tools, Forms, History",
+            "percentage": 24
+        },
+        {
+            "id": 4,
+            "title": "HTML Tools, Forms, History",
+            "percentage": 96
+        }
+    ]
+}
