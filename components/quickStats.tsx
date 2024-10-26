@@ -1,6 +1,8 @@
 import React from "react";
+import { useDataContext } from '@/context/DataContext';
 
 export default function QuickStats() {
+  const { data } = useDataContext();
   return (
     <>
       <div className="border w-full p-6 rounded-lg">
@@ -13,7 +15,7 @@ export default function QuickStats() {
               <span className="bg-slate-100 p-3 rounded-full text-sm lg:text-lg">🏆</span>
             </div>
             <div>
-              <h2 className="font-bold">1</h2>
+              <h2 className="font-bold">{data.rank}</h2>
               <p className="text-sm lg:text-base">YOUR RANK</p>
             </div>
           </div>
@@ -22,7 +24,7 @@ export default function QuickStats() {
               <span className="bg-slate-100 p-3 rounded-full text-sm lg:text-lg">🗓️</span>
             </div>
             <div>
-              <h2 className="font-bold">30%</h2>
+              <h2 className="font-bold">{data.percentile}%</h2>
               <p className="text-sm lg:text-base">PERCENTILE</p>
             </div>
           </div>
@@ -31,7 +33,7 @@ export default function QuickStats() {
               <span className="bg-slate-100 p-3 rounded-full text-sm lg:text-lg">✅</span>
             </div>
             <div>
-              <h2 className="font-bold">10/15</h2>
+              <h2 className="font-bold">{data.score}/15</h2>
               <p className="text-sm lg:text-base">CORRECT ANSWERS</p>
             </div>
           </div>

@@ -1,7 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import { LineChart } from "@mui/x-charts/LineChart";
+import { useDataContext } from '@/context/DataContext';
 
 export default function comparisonGraph() {
+  const { data } = useDataContext();
   return (
     <>
       <div className="flex flex-col gap-12 border w-full p-6 rounded-lg">
@@ -11,7 +14,7 @@ export default function comparisonGraph() {
         <div>
           <p>
             <span className="font-bold text-gray-600">
-              You scored 90% percentile
+              You scored {data.percentile}% percentile
             </span>{" "}
             which is lower than the average percentile 72% of all the engineers
             who took this assessment

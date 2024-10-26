@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import Navbar from "@/components/navbar";
-import SkillsPage from "@/components/skillsPage"
+import SkillsPage from "@/components/skillsPage";
+import { DataProvider } from "../context/DataContext";
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
           <Navbar />
         </aside>
         <section className="col-span-10">
-          <SkillsPage />
+          <DataProvider>
+            <SkillsPage />
+          </DataProvider>
         </section>
       </main>
     </>
