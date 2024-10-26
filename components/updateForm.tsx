@@ -2,7 +2,11 @@ import React from "react";
 import Image from "next/image";
 import html from "@/assets/html.svg";
 
-export default function updateForm({ close }: any) {
+interface UpdateFormProps {
+    close: () => void;
+  }
+
+export default function updateForm({ close }: UpdateFormProps) {
   return (
     <>
       <div className="absolute inset-0 m-auto bg-black/25 z-10 w-screen h-screen">
